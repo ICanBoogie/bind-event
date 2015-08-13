@@ -50,7 +50,7 @@ return [
 	'events' => [
 	
 		'Icybee\Modules\Nodes\SaveOperation::process' => $hooks . 'on_nodes_save',
-		'ICanBoogie\AuthenticationRequired::rescue' => $hooks . 'on_authentication_required_rescue'
+		'ICanBoogie\HTTP\AuthenticationRequired::rescue' => $hooks . 'on_authentication_required_rescue'
 	
 	]
 ];

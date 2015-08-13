@@ -20,11 +20,5 @@ use ICanBoogie\EventCollection;
  */
 trait CoreBindings
 {
-	/**
-	 * @return EventCollection
-	 */
-	protected function lazy_get_events()
-	{
-		return parent::lazy_get_events();
-	}
+
 }

@@ -17,7 +17,7 @@ use ICanBoogie\EventCollection;
 class HooksTest extends \PHPUnit_Framework_TestCase
 {
 	/**
-	 * @var Application
+	 * @var Core
 	 */
 	private $app;
 
