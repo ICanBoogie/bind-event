@@ -2,14 +2,12 @@
 
 namespace ICanBoogie\Binding\Event;
 
+use ICanBoogie;
+
 $hooks = Hooks::class . '::';
 
 return [
 
-	'prototypes' => [
-
-		'ICanBoogie\Core::lazy_get_events' => $hooks . 'get_events'
-
-	]
+	ICanBoogie\Core::class . '::lazy_get_events' => $hooks . 'get_events'
 
 ];
