@@ -1,7 +1,7 @@
 # customization
 
 PACKAGE_NAME = icanboogie/bind-event
-PACKAGE_VERSION = dev-master
+PACKAGE_VERSION = 2.0.0
 
 # do not edit the following lines
 
