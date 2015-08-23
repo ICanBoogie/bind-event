@@ -17,8 +17,8 @@ use ICanBoogie\EventCollection;
 class Hooks
 {
 	/**
-	 * Synthesizes a configuration suitable to create {@link EventCollection} instances, from the "hooks"
-	 * config.
+	 * Synthesizes a configuration suitable to create {@link EventCollection} instances, from
+	 * "event" config fragments.
 	 *
 	 * @param array $fragments Configuration fragments.
 	 *
@@ -32,12 +32,7 @@ class Hooks
 
 		foreach ($fragments as $pathname => $fragment)
 		{
-			if (empty($fragment['events']))
-			{
-				continue;
-			}
-
-			foreach ($fragment['events'] as $type => $callback)
+			foreach ($fragment as $type => $callback)
 			{
 				#
 				# because modules are ordered by weight (most important are first), we can
@@ -64,7 +59,7 @@ class Hooks
 
 		if (!$events)
 		{
-			$events = new EventCollection($app->configs['events']);
+			$events = new EventCollection($app->configs['event']);
 			$events->set_instance_provider(function () use ($app) {
 
 				return $app->events;

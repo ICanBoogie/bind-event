@@ -28,7 +28,7 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 
 	public function test_config()
 	{
-		$config = $this->app->configs['events'];
+		$config = $this->app->configs['event'];
 
 		$this->assertArrayHasKey('Sample\Class\A', $config);
 		$this->assertArrayHasKey('Sample\Class\B', $config);

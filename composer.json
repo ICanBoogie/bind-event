@@ -40,7 +40,7 @@
 		"icanboogie": {
 			"config-path": "config",
 			"config-constructor": {
-				"events": "ICanBoogie\\Binding\\Event\\Hooks::synthesize_config#hooks"
+				"event": "ICanBoogie\\Binding\\Event\\Hooks::synthesize_config"
 			}
 		}
 	}

@@ -8,7 +8,7 @@
 [![Packagist](https://img.shields.io/packagist/dt/icanboogie/bind-event.svg)](https://packagist.org/packages/icanboogie/bind-event)
 
 The **icanboogie/bind-event** package binds [icanboogie/event][] to [ICanBoogie][], using its
-[Autoconfig feature][]. It provides a config synthesizer for event hooks defined in `hooks`
+[Autoconfig feature][]. It provides a config synthesizer for event hooks defined in `event`
 configuration fragments, and an `events` getter for [Core][] instances.
 
 ```php
@@ -20,17 +20,17 @@ require 'vendor/autoload.php';
 
 $app = boot();
 
-$app->configs['events']; // obtain the "events" config.
-$app->events;            // obtain an EventCollection instance created with the "events" config.
+$app->configs['event']; // obtain the "event" config.
+$app->events;           // obtain an EventCollection instance created with the "event" config.
 ```
 
 
 
 
 
-## Attaching event hooks using the `hooks` config
+## Attaching event hooks using the `event` config
 
-The `hooks` config can be used to define event hooks.
+The `event` config can be used to define event hooks.
 
 The following example demonstrates how an application can attach event hooks to be notified when
 nodes are saved (or nodes subclasses), and when an authentication exception is thrown during the
@@ -39,20 +39,20 @@ dispatch of a request.
 ```php
 <?php
 
-// config/hooks.php
+// config/event.php
 
 namespace App;
+
+use ICanBoogie;
+use Icybee;
 
 $hooks = Hooks::class . '::';
 
 return [
 
-	'events' => [
-	
-		'Icybee\Modules\Nodes\SaveOperation::process' => $hooks . 'on_nodes_save',
-		'ICanBoogie\HTTP\AuthenticationRequired::rescue' => $hooks . 'on_authentication_required_rescue'
-	
-	]
+	Icybee\Modules\Nodes\SaveOperation::class . '::process' => $hooks . 'on_nodes_save',
+	ICanBoogie\HTTP\AuthenticationRequired::class . '::rescue' => $hooks . 'on_authentication_required_rescue'
+
 ];
 ```
 
@@ -141,4 +141,4 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 [icanboogie/event]: https://github.com/ICanBoogie/Event
 [Autoconfig feature]: https://github.com/ICanBoogie/ICanBoogie#autoconfig
 [ICanBoogie]: https://github.com/ICanBoogie/ICanBoogie
-[Core]: http://api.icanboogie.org/core/class-ICanBoogie.Core.html
+[Core]: http://api.icanboogie.org/icanboogie/2.4/class-ICanBoogie.Core.html
