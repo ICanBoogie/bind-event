@@ -13,6 +13,7 @@ namespace ICanBoogie\Binding\Event;
 
 use ICanBoogie\Core;
 use ICanBoogie\EventCollection;
+use ICanBoogie\EventCollectionProvider;
 
 class Hooks
 {
@@ -60,7 +61,8 @@ class Hooks
 		if (!$events)
 		{
 			$events = new EventCollection($app->configs['event']);
-			$events->set_instance_provider(function () use ($app) {
+
+			EventCollectionProvider::using(function () use ($app) {
 
 				return $app->events;
 

@@ -13,6 +13,7 @@ namespace ICanBoogie\Binding\Event;
 
 use ICanBoogie\Core;
 use ICanBoogie\EventCollection;
+use ICanBoogie\EventCollectionProvider;
 
 class HooksTest extends \PHPUnit_Framework_TestCase
 {
@@ -43,6 +44,6 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 		$events = Hooks::get_events($this->app);
 
 		$this->assertSame($events, $this->app->events);
-		$this->assertSame($events, EventCollection::get());
+		$this->assertSame($events, EventCollectionProvider::provide());
 	}
 }

@@ -22,8 +22,8 @@
 
 	"require": {
 		"php": ">=5.5.0",
-		"icanboogie/icanboogie": "^2.4.0",
-		"icanboogie/event": "^1.4.0"
+		"icanboogie/icanboogie": "^3.0.0",
+		"icanboogie/event": "^2.0.0"
 	},
 
 	"autoload": {
