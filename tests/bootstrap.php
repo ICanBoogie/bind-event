@@ -11,16 +11,9 @@
 
 namespace ICanBoogie;
 
-use ICanBoogie\Binding\Event\CoreBindings as EventBindings;
-
 require __DIR__ . '/../vendor/autoload.php';
 
-class Application extends Core
-{
-	use EventBindings;
-}
-
-(new Application(array_merge_recursive(get_autoconfig(), [
+(new Core(array_merge_recursive(get_autoconfig(), [
 
 	'config-path' => [
 
