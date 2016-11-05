@@ -68,7 +68,7 @@ return [
 
 ## Requirements
 
-The package requires PHP 5.5 or later.
+The package requires PHP 5.6 or later.
 
 
 
@@ -136,8 +136,8 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
 
 
-[documentation]:         http://api.icanboogie.org/bind-event/2.0/
-[Core]:                  http://api.icanboogie.org/icanboogie/3.0/class-ICanBoogie.Core.html
+[documentation]:         http://api.icanboogie.org/bind-event/3.0/
+[Core]:                  http://api.icanboogie.org/icanboogie/4.0/class-ICanBoogie.Core.html
 [icanboogie/icanboogie]: https://github.com/ICanBoogie/ICanBoogie
 [icanboogie/event]:      https://github.com/ICanBoogie/Event
 [Autoconfig feature]:    https://github.com/ICanBoogie/ICanBoogie#autoconfig

@@ -62,7 +62,7 @@ class Hooks
 		{
 			$events = new EventCollection($app->configs['event']);
 
-			EventCollectionProvider::using(function () use ($app) {
+			EventCollectionProvider::define(function () use ($app) {
 
 				return $app->events;
 
