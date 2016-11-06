@@ -102,11 +102,10 @@ can be cloned with the following command line:
 
 ## Documentation
 
-The package is documented as part of the [ICanBoogie][] framework
-[documentation](http://icanboogie.org/docs/). You can generate the documentation for the package
-and its dependencies with the `make doc` command. The documentation is generated in the
-`build/docs` directory. [ApiGen](http://apigen.org/) is required. The directory can later be
-cleaned with the `make clean` command.
+The package is documented as part of the [ICanBoogie][] framework [documentation][]. You can
+generate the documentation for the package and its dependencies with the `make doc` command. The
+documentation is generated in the `build/docs` directory. [ApiGen](http://apigen.org/) is required.
+The directory can later be cleaned with the `make clean` command.
 
 
 
@@ -137,8 +136,9 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
 
 
+[documentation]:         http://api.icanboogie.org/bind-event/2.0/
+[Core]:                  http://api.icanboogie.org/icanboogie/3.0/class-ICanBoogie.Core.html
 [icanboogie/icanboogie]: https://github.com/ICanBoogie/ICanBoogie
-[icanboogie/event]: https://github.com/ICanBoogie/Event
-[Autoconfig feature]: https://github.com/ICanBoogie/ICanBoogie#autoconfig
-[ICanBoogie]: https://github.com/ICanBoogie/ICanBoogie
-[Core]: http://api.icanboogie.org/icanboogie/2.4/class-ICanBoogie.Core.html
+[icanboogie/event]:      https://github.com/ICanBoogie/Event
+[Autoconfig feature]:    https://github.com/ICanBoogie/ICanBoogie#autoconfig
+[ICanBoogie]:            https://github.com/ICanBoogie/ICanBoogie

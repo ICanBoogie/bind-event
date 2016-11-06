@@ -19,6 +19,7 @@
 	},
 
 	"minimum-stability": "dev",
+	"prefer-stable": true,
 
 	"require": {
 		"php": ">=5.5.0",
@@ -32,10 +33,6 @@
 		}
 	},
 
-	"scripts": {
-		"post-autoload-dump": "ICanBoogie\\Autoconfig\\Hooks::on_autoload_dump"
-	},
-
 	"extra": {
 		"icanboogie": {
 			"config-path": "config",
@@ -43,5 +40,9 @@
 				"event": "ICanBoogie\\Binding\\Event\\Hooks::synthesize_config"
 			}
 		}
+	},
+
+	"scripts": {
+		"post-autoload-dump": "ICanBoogie\\Autoconfig\\Hooks::on_autoload_dump"
 	}
 }
