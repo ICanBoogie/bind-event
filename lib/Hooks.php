@@ -18,36 +18,6 @@ use ICanBoogie\EventCollectionProvider;
 class Hooks
 {
 	/**
-	 * Synthesizes a configuration suitable to create {@link EventCollection} instances, from
-	 * "event" config fragments.
-	 *
-	 * @param array $fragments Configuration fragments.
-	 *
-	 * @throws \InvalidArgumentException in attempt to specify an invalid event callback.
-	 *
-	 * @return array
-	 */
-	static public function synthesize_config(array $fragments)
-	{
-		$events = [];
-
-		foreach ($fragments as $pathname => $fragment)
-		{
-			foreach ($fragment as $type => $callback)
-			{
-				#
-				# because modules are ordered by weight (most important are first), we can
-				# push callbacks instead of unshifting them.
-				#
-
-				$events[$type][] = $callback;
-			}
-		}
-
-		return $events;
-	}
-
-	/**
 	 * Returns an {@link EventCollection} instance created with the hooks from the `events` config.
 	 *
 	 * @param Application $app
