@@ -14,11 +14,11 @@ namespace ICanBoogie\Binding\Event;
 use ICanBoogie\EventCollection;
 
 /**
- * {@link \ICanBoogie\Core} prototype bindings.
+ * {@link \ICanBoogie\Application} prototype bindings.
  *
  * @property EventCollection $events
  */
-trait CoreBindings
+trait ApplicationBindings
 {
 
 }

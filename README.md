@@ -9,7 +9,7 @@
 
 The **icanboogie/bind-event** package binds [icanboogie/event][] to [ICanBoogie][], using its
 [Autoconfig feature][]. It provides a config synthesizer for event hooks defined in `event`
-configuration fragments, and an `events` getter for [Core][] instances.
+configuration fragments, and an `events` getter for [Application][] instances.
 
 ```php
 <?php
@@ -82,9 +82,6 @@ The recommended way to install this package is through [Composer](http://getcomp
 $ composer require icanboogie/bind-event
 ```
 
-The package only specifies a minimum version while requiring [icanboogie/icanboogie][] and
-[icanboogie/event], you might want to specify which version to use in your "composer.json" file.
-
 
 
 
@@ -136,9 +133,8 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
 
 
-[documentation]:         http://api.icanboogie.org/bind-event/3.0/
-[Core]:                  http://api.icanboogie.org/icanboogie/4.0/class-ICanBoogie.Core.html
-[icanboogie/icanboogie]: https://github.com/ICanBoogie/ICanBoogie
+[documentation]:         https://icanboogie.org/api/bind-event/3.0/
+[ICanBoogie]:            https://icanboogie.org/
+[Application]:           https://icanboogie.org/api/icanboogie/4.0/class-ICanBoogie.Core.html
+[Autoconfig feature]:    https://icanboogie.org/docs/4.0/autoconfig
 [icanboogie/event]:      https://github.com/ICanBoogie/Event
-[Autoconfig feature]:    https://github.com/ICanBoogie/ICanBoogie#autoconfig
-[ICanBoogie]:            https://github.com/ICanBoogie/ICanBoogie

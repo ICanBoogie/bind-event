@@ -11,7 +11,7 @@
 
 namespace ICanBoogie\Binding\Event;
 
-use ICanBoogie\Core;
+use ICanBoogie\Application;
 use ICanBoogie\EventCollection;
 use ICanBoogie\EventCollectionProvider;
 
@@ -50,11 +50,11 @@ class Hooks
 	/**
 	 * Returns an {@link EventCollection} instance created with the hooks from the `events` config.
 	 *
-	 * @param Core $app
+	 * @param Application $app
 	 *
 	 * @return EventCollection
 	 */
-	static public function get_events(Core $app)
+	static public function get_events(Application $app)
 	{
 		static $events;
 

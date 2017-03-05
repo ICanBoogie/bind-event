@@ -8,6 +8,6 @@ $hooks = Hooks::class . '::';
 
 return [
 
-	ICanBoogie\Core::class . '::lazy_get_events' => $hooks . 'get_events'
+	ICanBoogie\Application::class . '::lazy_get_events' => $hooks . 'get_events'
 
 ];

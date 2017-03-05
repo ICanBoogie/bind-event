@@ -11,8 +11,9 @@
 
 namespace ICanBoogie;
 
-chdir(__DIR__);
+use ICanBoogie\Binding\Event\ApplicationBindings;
 
-require __DIR__ . '/../vendor/autoload.php';
-
-boot();
+class Application extends Core
+{
+	use ApplicationBindings;
+}

@@ -11,15 +11,17 @@
 
 namespace ICanBoogie\Binding\Event;
 
+use function ICanBoogie\app;
 use ICanBoogie\EventCollection;
 
-class CoreBindingsTest extends \PHPUnit_Framework_TestCase
+/**
+ * @group integration
+ */
+class ApplicationBindingsTest extends \PHPUnit_Framework_TestCase
 {
 	public function test_lazy_get_events()
 	{
-		/* @var $app \ICanBoogie\Application */
-
-		$app = \ICanBoogie\app();
+		$app = app();
 		$events = $app->events;
 
 		$this->assertInstanceOf(EventCollection::class, $events);

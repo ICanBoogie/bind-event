@@ -9,10 +9,10 @@ usage:
 	@echo "test:  Runs the test suite.\ndoc:   Creates the documentation.\nclean: Removes the documentation, the dependencies and the Composer files."
 
 vendor:
-	@COMPOSER_ROOT_VERSION=$(PACKAGE_VERSION) composer install --prefer-dist
+	@COMPOSER_ROOT_VERSION=$(PACKAGE_VERSION) composer install
 
 update:
-	@COMPOSER_ROOT_VERSION=$(PACKAGE_VERSION) composer update --prefer-dist
+	@COMPOSER_ROOT_VERSION=$(PACKAGE_VERSION) composer update
 
 autoload: vendor
 	@composer dump-autoload
@@ -22,7 +22,7 @@ test: vendor
 
 test-coverage: vendor
 	@mkdir -p build/coverage
-	@phpunit --coverage-html build/coverage
+	@phpunit --coverage-html ../build/coverage
 
 doc: vendor
 	@mkdir -p build/docs

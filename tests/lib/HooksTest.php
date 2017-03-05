@@ -11,20 +11,23 @@
 
 namespace ICanBoogie\Binding\Event;
 
-use ICanBoogie\Core;
-use ICanBoogie\EventCollection;
+use function ICanBoogie\app;
+use ICanBoogie\Application;
 use ICanBoogie\EventCollectionProvider;
 
+/**
+ * @group integration
+ */
 class HooksTest extends \PHPUnit_Framework_TestCase
 {
 	/**
-	 * @var Core
+	 * @var Application
 	 */
 	private $app;
 
 	public function setup()
 	{
-		$this->app = \ICanBoogie\app();
+		$this->app = app();
 	}
 
 	public function test_config()
