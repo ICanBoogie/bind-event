@@ -13,7 +13,7 @@ namespace ICanBoogie;
 
 use ICanBoogie\Binding\Event\ApplicationBindings;
 
-class Application extends Core
+class Application extends ApplicationAbstract
 {
 	use ApplicationBindings;
 }
