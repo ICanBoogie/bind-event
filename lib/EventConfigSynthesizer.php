@@ -23,7 +23,7 @@ class EventConfigSynthesizer
 	 *
 	 * @return array
 	 */
-	static public function synthesize(array $fragments)
+	static public function synthesize(array $fragments): array
 	{
 		$events = [];
 

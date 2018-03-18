@@ -24,7 +24,7 @@ class Hooks
 	 *
 	 * @return EventCollection
 	 */
-	static public function get_events(Application $app)
+	static public function get_events(Application $app): EventCollection
 	{
 		static $events;
 
@@ -32,7 +32,7 @@ class Hooks
 		{
 			$events = new EventCollection($app->configs['event']);
 
-			EventCollectionProvider::define(function () use ($app) {
+			EventCollectionProvider::define(function () use ($app): EventCollection {
 
 				return $app->events;
 

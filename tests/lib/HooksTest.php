@@ -18,7 +18,7 @@ use ICanBoogie\EventCollectionProvider;
 /**
  * @group integration
  */
-class HooksTest extends \PHPUnit_Framework_TestCase
+class HooksTest extends \PHPUnit\Framework\TestCase
 {
 	/**
 	 * @var Application

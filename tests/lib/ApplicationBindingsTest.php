@@ -17,7 +17,7 @@ use ICanBoogie\EventCollection;
 /**
  * @group integration
  */
-class ApplicationBindingsTest extends \PHPUnit_Framework_TestCase
+class ApplicationBindingsTest extends \PHPUnit\Framework\TestCase
 {
 	public function test_lazy_get_events()
 	{

@@ -1,8 +1,8 @@
 # customization
 
 PACKAGE_NAME = icanboogie/bind-event
-PACKAGE_VERSION = 3.0
-PHPUNIT_VERSION = phpunit-5.7.phar
+PACKAGE_VERSION = 5.0
+PHPUNIT_VERSION = phpunit-7.phar
 PHPUNIT_FILENAME = build/$(PHPUNIT_VERSION)
 PHPUNIT = php $(PHPUNIT_FILENAME)
 
@@ -37,7 +37,7 @@ test-coveralls: all
 	@mkdir -p build/logs
 	COMPOSER_ROOT_VERSION=$(PACKAGE_VERSION) composer require satooshi/php-coveralls
 	@$(PHPUNIT) --coverage-clover ../build/logs/clover.xml
-	php vendor/bin/coveralls -v
+	php vendor/bin/php-coveralls -v
 
 doc: vendor
 	@mkdir -p build/docs
