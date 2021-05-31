@@ -1,7 +1,7 @@
 # bind-event
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-event.svg)](https://packagist.org/packages/icanboogie/bind-event)
-[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-event/master.svg)](http://travis-ci.org/ICanBoogie/bind-event)
+[![Build Status](https://img.shields.io/github/workflow/status/ICanBoogie/bind-event/test)](https://github.com/ICanBoogie/bind-event/actions?query=workflow%3Atest)
 [![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-event/master.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-event)
 [![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-event/master.svg)](https://coveralls.io/r/ICanBoogie/bind-event)
 [![Packagist](https://img.shields.io/packagist/dt/icanboogie/bind-event.svg)](https://packagist.org/packages/icanboogie/bind-event)
