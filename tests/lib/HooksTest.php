@@ -11,21 +11,23 @@
 
 namespace ICanBoogie\Binding\Event;
 
-use function ICanBoogie\app;
 use ICanBoogie\Application;
 use ICanBoogie\EventCollectionProvider;
+use PHPUnit\Framework\TestCase;
+
+use function ICanBoogie\app;
 
 /**
  * @group integration
  */
-class HooksTest extends \PHPUnit\Framework\TestCase
+class HooksTest extends TestCase
 {
 	/**
 	 * @var Application
 	 */
 	private $app;
 
-	public function setup()
+	protected function setup(): void
 	{
 		$this->app = app();
 	}

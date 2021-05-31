@@ -2,6 +2,7 @@
 	"name": "icanboogie/bind-event",
 	"type": "library",
 	"description": "Binds icanboogie/event to ICanBoogie.",
+	"version": "5.0",
 	"keywords": [
 		"event",
 		"icanboogie"
@@ -20,13 +21,18 @@
 		"issues": "https://github.com/ICanBoogie/bind-event/issues",
 		"source": "https://github.com/ICanBoogie/bind-event"
 	},
+	"config": {
+		"sort-packages": true
+	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
-	"prefer-dist": true,
 	"require": {
-		"php": "^7.2",
+		"php": ">=7.2",
 		"icanboogie/icanboogie": "^5.0",
 		"icanboogie/event": "^4.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^8.5"
 	},
 	"autoload": {
 		"psr-4": {

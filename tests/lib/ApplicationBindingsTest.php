@@ -11,13 +11,15 @@
 
 namespace ICanBoogie\Binding\Event;
 
-use function ICanBoogie\app;
 use ICanBoogie\EventCollection;
+use PHPUnit\Framework\TestCase;
+
+use function ICanBoogie\app;
 
 /**
  * @group integration
  */
-class ApplicationBindingsTest extends \PHPUnit\Framework\TestCase
+class ApplicationBindingsTest extends TestCase
 {
 	public function test_lazy_get_events()
 	{
