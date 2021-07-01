@@ -15,14 +15,12 @@ use ICanBoogie\Application;
 use ICanBoogie\EventCollection;
 use ICanBoogie\EventCollectionProvider;
 
-class Hooks
+final class Hooks
 {
 	/**
 	 * Returns an {@link EventCollection} instance created with the hooks from the `events` config.
 	 *
-	 * @param Application $app
-	 *
-	 * @return EventCollection
+	 * @uses EventConfigSynthesizer::synthesize()
 	 */
 	static public function get_events(Application $app): EventCollection
 	{

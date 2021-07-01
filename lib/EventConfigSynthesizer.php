@@ -11,23 +11,25 @@
 
 namespace ICanBoogie\Binding\Event;
 
-class EventConfigSynthesizer
+use InvalidArgumentException;
+
+final class EventConfigSynthesizer
 {
 	/**
 	 * Synthesizes a configuration suitable to create {@link EventCollection} instances, from
 	 * "event" config fragments.
 	 *
-	 * @param array $fragments Configuration fragments.
+	 * @param array<string, array<string, callable>> $fragments Configuration fragments.
 	 *
-	 * @throws \InvalidArgumentException in attempt to specify an invalid event callback.
+	 * @throws InvalidArgumentException in attempt to specify an invalid event callback.
 	 *
-	 * @return array
+	 * @return array<string, callable[]>
 	 */
 	static public function synthesize(array $fragments): array
 	{
 		$events = [];
 
-		foreach ($fragments as $pathname => $fragment)
+		foreach ($fragments as $fragment)
 		{
 			foreach ($fragment as $type => $callback)
 			{
