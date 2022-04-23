@@ -9,39 +9,33 @@
  * file that was distributed with this source code.
  */
 
-namespace ICanBoogie\Binding\Event;
+namespace Test\ICanBoogie\Binding\Event;
 
 use ICanBoogie\Application;
+use ICanBoogie\Binding\Event\Hooks;
 use ICanBoogie\EventCollectionProvider;
 use PHPUnit\Framework\TestCase;
 
 use function ICanBoogie\app;
+use function ICanBoogie\emit;
 
 /**
  * @group integration
  */
 class HooksTest extends TestCase
 {
-	/**
-	 * @var Application
-	 */
-	private $app;
+	private Application $app;
 
 	protected function setup(): void
 	{
 		$this->app = app();
 	}
 
-	public function test_config()
+	public function test_emit()
 	{
-		$config = $this->app->configs['event'];
+		$event = emit(new SampleEvent());
 
-		$this->assertArrayHasKey('Sample\Class\A', $config);
-		$this->assertArrayHasKey('Sample\Class\B', $config);
-		$this->assertArrayHasKey('Sample\Class\C', $config);
-		$this->assertContains('Sample\Hook::function_a', $config['Sample\Class\A']);
-		$this->assertContains('Sample\Hook::function_b', $config['Sample\Class\B']);
-		$this->assertContains('Sample\Hook::function_c', $config['Sample\Class\C']);
+		$this->assertEquals("Hello world!", $event->result);
 	}
 
 	public function test_events()

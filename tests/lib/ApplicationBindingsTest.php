@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace ICanBoogie\Binding\Event;
+namespace Test\ICanBoogie\Binding\Event;
 
 use ICanBoogie\EventCollection;
 use PHPUnit\Framework\TestCase;

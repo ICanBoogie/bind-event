@@ -40,6 +40,9 @@
 		}
 	},
 	"autoload-dev": {
+		"psr-4": {
+			"Test\\ICanBoogie\\Binding\\Event\\": "tests/lib"
+		},
 		"classmap": [
 			"tests/Application.php"
 		]
@@ -48,7 +51,7 @@
 		"icanboogie": {
 			"config-path": "config",
 			"config-constructor": {
-				"event": "ICanBoogie\\Binding\\Event\\EventConfigSynthesizer::synthesize"
+				"event": "ICanBoogie\\Binding\\Event\\ConfigBuilder"
 			}
 		}
 	},
