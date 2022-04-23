@@ -1,13 +1,8 @@
 <?php
 
-namespace ICanBoogie\Binding\Event;
+use ICanBoogie\Application;
+use ICanBoogie\Binding\Event\Hooks;
+use ICanBoogie\Binding\Prototype\ConfigBuilder;
 
-use ICanBoogie;
-
-$hooks = Hooks::class . '::';
-
-return [
-
-	ICanBoogie\Application::class . '::lazy_get_events' => $hooks . 'get_events'
-
-];
+return fn(ConfigBuilder $config) => $config
+	->bind(Application::class, 'lazy_get_events', [ Hooks::class, 'get_events']);
