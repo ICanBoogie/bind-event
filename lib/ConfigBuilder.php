@@ -17,6 +17,11 @@ use ICanBoogie\Event\Config;
 
 final class ConfigBuilder implements Builder
 {
+	public static function get_fragment_filename(): string
+	{
+		return 'event';
+	}
+
 	private readonly Event\ConfigBuilder $inner_builder;
 
 	public function __construct()

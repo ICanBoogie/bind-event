@@ -17,25 +17,18 @@ use ICanBoogie\EventCollectionProvider;
 
 final class Hooks
 {
-	/**
-	 * Returns an {@link EventCollection} instance created with the hooks from the `events` config.
-	 *
-	 * @uses EventConfigSynthesizer::synthesize()
-	 */
 	static public function get_events(Application $app): EventCollection
 	{
 		static $events;
 
-		if (!$events)
-		{
-			$events = new EventCollection($app->configs['event']);
+		return $events ??= self::make_events($app);
+	}
 
-			EventCollectionProvider::define(function () use ($app): EventCollection {
+	static private function make_events(Application $app): EventCollection
+	{
+		$events = new EventCollection($app->configs['event']);
 
-				return $app->events;
-
-			});
-		}
+		EventCollectionProvider::define(fn(): EventCollection => $events);
 
 		return $events;
 	}

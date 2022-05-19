@@ -11,11 +11,9 @@
 
 namespace Test\ICanBoogie\Binding\Event;
 
-class SampleEvent
+use ICanBoogie\Event;
+
+class SampleEvent extends Event
 {
 	public string $result;
-
-	public function __construct()
-	{
-	}
 }
