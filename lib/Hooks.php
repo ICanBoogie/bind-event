@@ -27,7 +27,7 @@ final class Hooks
 
 	static private function make_events(Application $app): EventCollection
 	{
-		$events = new EventCollection($app->configs[Config::class]);
+		$events = new EventCollection($app->configs->config_for_class(Config::class));
 
 		EventCollectionProvider::define(fn(): EventCollection => $events);
 
