@@ -12,6 +12,7 @@
 namespace ICanBoogie\Binding\Event;
 
 use ICanBoogie\Application;
+use ICanBoogie\Event\Config;
 use ICanBoogie\EventCollection;
 use ICanBoogie\EventCollectionProvider;
 
@@ -26,7 +27,7 @@ final class Hooks
 
 	static private function make_events(Application $app): EventCollection
 	{
-		$events = new EventCollection($app->configs['event']);
+		$events = new EventCollection($app->configs[Config::class]);
 
 		EventCollectionProvider::define(fn(): EventCollection => $events);
 
