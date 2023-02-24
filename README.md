@@ -1,10 +1,9 @@
 # bind-event
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-event.svg)](https://packagist.org/packages/icanboogie/bind-event)
-[![Build Status](https://img.shields.io/github/workflow/status/ICanBoogie/bind-event/test)](https://github.com/ICanBoogie/bind-event/actions?query=workflow%3Atest)
 [![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-event/master.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-event)
 [![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-event/master.svg)](https://coveralls.io/r/ICanBoogie/bind-event)
-[![Packagist](https://img.shields.io/packagist/dt/icanboogie/bind-event.svg)](https://packagist.org/packages/icanboogie/bind-event)
+[![Downloads](https://img.shields.io/packagist/dt/icanboogie/bind-event.svg)](https://packagist.org/packages/icanboogie/bind-event)
 
 The **icanboogie/bind-event** package binds [icanboogie/event][] to [ICanBoogie][], using its
 [Autoconfig feature][]. It provides a config synthesizer for event hooks defined in `event`
@@ -23,6 +22,13 @@ $app->configs['event']; // obtain the "event" config.
 $app->events;           // obtain an EventCollection instance created with the "event" config.
 ```
 
+
+
+#### Installation
+
+```bash
+composer require icanboogie/bind-event
+```
 
 
 
@@ -63,50 +69,32 @@ return [
 
 
 
+## Continuous Integration
 
+The project is continuously tested by [GitHub actions](https://github.com/ICanBoogie/bind-event/actions).
 
-## Requirements
-
-The package requires PHP 7.2 or later.
-
-
-
-
-
-## Installation
-
-```bash
-composer require icanboogie/bind-event
-```
+[![Tests](https://github.com/ICanBoogie/bind-event/workflows/test/badge.svg)](https://github.com/ICanBoogie/bind-event/actions?query=workflow%3Atest)
+[![Static Analysis](https://github.com/ICanBoogie/bind-event/workflows/static-analysis/badge.svg)](https://github.com/ICanBoogie/bind-event/actions?query=workflow%3Astatic-analysis)
+[![Code Style](https://github.com/ICanBoogie/bind-event/workflows/code-style/badge.svg)](https://github.com/ICanBoogie/bind-event/actions?query=workflow%3Acode-style)
 
 
 
+## Code of Conduct
 
-
-## Documentation
-
-The package is documented as part of the [ICanBoogie][] framework [documentation][]. You can
-generate the documentation for the package and its dependencies with the `make doc` command. The
-documentation is generated in the `build/docs` directory. [ApiGen](http://apigen.org/) is required.
-The directory can later be cleaned with the `make clean` command.
+This project adheres to a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in
+this project and its community, you are expected to uphold this code.
 
 
 
+## Contributing
 
-
-## Testing
-
-Run `make test-container` to create and log into the test container, then run `make test` to run the
-test suite. Alternatively, run `make test-coverage` to run the test suite with test coverage. Open
-`build/coverage/index.html` to see the breakdown of the code coverage.
-
-
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 
 
 ## License
 
-**icanboogie/bind-event** is released under the [New BSD License](LICENSE).
+**icanboogie/bind-event** is released under the [BSD-3-Clause](LICENSE).
 
 
 

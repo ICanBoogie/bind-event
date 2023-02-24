@@ -13,8 +13,8 @@ namespace Test\ICanBoogie\Binding\Event;
 
 final class SampleListener
 {
-	static public function on_event(SampleEvent $event)
-	{
-		$event->result = "Hello world!";
-	}
+    public static function on_event(SampleEvent $event): void
+    {
+        $event->result = "Hello world!";
+    }
 }

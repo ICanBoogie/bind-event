@@ -20,5 +20,4 @@ use ICanBoogie\EventCollection;
  */
 trait ApplicationBindings
 {
-
 }

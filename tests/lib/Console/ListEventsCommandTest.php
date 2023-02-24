@@ -7,29 +7,29 @@ use ICanBoogie\Console\Test\CommandTestCase;
 
 final class ListEventsCommandTest extends CommandTestCase
 {
-	public static function provideExecute(): array
-	{
-		return [
+    public static function provideExecute(): array
+    {
+        return [
 
-			[
-				'events',
-				ListEventsCommand::class,
-				[],
-				[
-					'Test\ICanBoogie\Binding\Event\SampleEvent',
-					'Test\ICanBoogie\Binding\Event\SampleListener::on_event'
-				]
-			],
+            [
+                'events',
+                ListEventsCommand::class,
+                [],
+                [
+                    'Test\ICanBoogie\Binding\Event\SampleEvent',
+                    'Test\ICanBoogie\Binding\Event\SampleListener::on_event'
+                ]
+            ],
 
-		];
-	}
+        ];
+    }
 
-	public function testAlias(): void
-	{
-		$loader = $this->getCommandLoader();
-		$command1 = $loader->get('events');
-		$command2 = $loader->get('events:list');
+    public function testAlias(): void
+    {
+        $loader = $this->getCommandLoader();
+        $command1 = $loader->get('events');
+        $command2 = $loader->get('events:list');
 
-		$this->assertSame($command1, $command2);
-	}
+        $this->assertSame($command1, $command2);
+    }
 }

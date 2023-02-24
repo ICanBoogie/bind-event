@@ -22,27 +22,27 @@ use function ICanBoogie\emit;
 /**
  * @group integration
  */
-class HooksTest extends TestCase
+final class HooksTest extends TestCase
 {
-	private Application $app;
+    private Application $app;
 
-	protected function setup(): void
-	{
-		$this->app = app();
-	}
+    protected function setup(): void
+    {
+        $this->app = app();
+    }
 
-	public function test_emit()
-	{
-		$event = emit(new SampleEvent());
+    public function test_emit()
+    {
+        $event = emit(new SampleEvent());
 
-		$this->assertEquals("Hello world!", $event->result);
-	}
+        $this->assertEquals("Hello world!", $event->result);
+    }
 
-	public function test_events()
-	{
-		$events = Hooks::get_events($this->app);
+    public function test_events()
+    {
+        $events = Hooks::get_events($this->app);
 
-		$this->assertSame($events, $this->app->events);
-		$this->assertSame($events, EventCollectionProvider::provide());
-	}
+        $this->assertSame($events, $this->app->events);
+        $this->assertSame($events, EventCollectionProvider::provide());
+    }
 }

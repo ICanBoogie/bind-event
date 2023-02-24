@@ -19,14 +19,14 @@ use function ICanBoogie\app;
 /**
  * @group integration
  */
-class ApplicationBindingsTest extends TestCase
+final class ApplicationBindingsTest extends TestCase
 {
-	public function test_lazy_get_events()
-	{
-		$app = app();
-		$events = $app->events;
+    public function test_lazy_get_events()
+    {
+        $app = app();
+        $events = $app->events;
 
-		$this->assertInstanceOf(EventCollection::class, $events);
-		$this->assertSame($events, $app->events);
-	}
+        $this->assertInstanceOf(EventCollection::class, $events);
+        $this->assertSame($events, $app->events);
+    }
 }

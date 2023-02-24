@@ -18,19 +18,19 @@ use ICanBoogie\EventCollectionProvider;
 
 final class Hooks
 {
-	static public function get_events(Application $app): EventCollection
-	{
-		static $events;
+    public static function get_events(Application $app): EventCollection
+    {
+        static $events;
 
-		return $events ??= self::make_events($app);
-	}
+        return $events ??= self::make_events($app);
+    }
 
-	static private function make_events(Application $app): EventCollection
-	{
-		$events = new EventCollection($app->configs->config_for_class(Config::class));
+    private static function make_events(Application $app): EventCollection
+    {
+        $events = new EventCollection($app->configs->config_for_class(Config::class));
 
-		EventCollectionProvider::define(fn(): EventCollection => $events);
+        EventCollectionProvider::define(fn(): EventCollection => $events);
 
-		return $events;
-	}
+        return $events;
+    }
 }

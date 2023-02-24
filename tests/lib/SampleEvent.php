@@ -15,5 +15,5 @@ use ICanBoogie\Event;
 
 class SampleEvent extends Event
 {
-	public string $result;
+    public string $result;
 }
