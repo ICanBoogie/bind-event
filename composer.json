@@ -1,7 +1,7 @@
 {
 	"name": "icanboogie/bind-event",
 	"type": "library",
-	"description": "Binds icanboogie/event to ICanBoogie.",
+	"description": "Binds icanboogie/event to ICanBoogie",
 	"version": "6.0",
 	"keywords": [
 		"event",
@@ -42,10 +42,7 @@
 	"autoload-dev": {
 		"psr-4": {
 			"Test\\ICanBoogie\\Binding\\Event\\": "tests/lib"
-		},
-		"classmap": [
-			"tests/Application.php"
-		]
+		}
 	},
 	"extra": {
 		"icanboogie": {

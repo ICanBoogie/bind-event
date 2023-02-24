@@ -1,0 +1,18 @@
+services:
+  _defaults:
+    autowire: true
+
+  ICanBoogie\Event\Config:
+    factory: [ '@ICanBoogie\ConfigProvider', config_for_class ]
+    arguments:
+    - ICanBoogie\Event\Config
+
+  # Console
+
+  console.command.events.list:
+    class: ICanBoogie\Binding\Event\Console\ListEventsCommand
+    arguments:
+      $style: '%console.style.table%'
+    tags:
+    - { name: console.command, command: 'events' }
+    - { name: console.command, command: 'events:list' }
