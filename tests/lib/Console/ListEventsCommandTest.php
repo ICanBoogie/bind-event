@@ -16,8 +16,8 @@ final class ListEventsCommandTest extends CommandTestCase
                 ListEventsCommand::class,
                 [],
                 [
-                    'Test\ICanBoogie\Binding\Event\SampleEvent',
-                    'Test\ICanBoogie\Binding\Event\SampleListener::on_event'
+                    'Test\ICanBoogie\Binding\Event\Acme\SampleEvent',
+                    'Test\ICanBoogie\Binding\Event\Acme\SampleListener::on_event'
                 ]
             ],
 

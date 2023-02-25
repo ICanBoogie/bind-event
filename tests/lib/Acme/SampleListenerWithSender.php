@@ -9,15 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace ICanBoogie\Binding\Event;
+namespace Test\ICanBoogie\Binding\Event\Acme;
 
-use ICanBoogie\EventCollection;
-
-/**
- * {@link \ICanBoogie\Application} prototype bindings.
- *
- * @property EventCollection $events
- */
-trait ApplicationBindings
+final class SampleListenerWithSender
 {
+    public static function on_event(SampleEventWithSender $event, SampleSender $sender): void
+    {
+        $event->result = "Hello world!";
+    }
 }

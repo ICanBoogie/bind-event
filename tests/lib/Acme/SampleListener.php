@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Test\ICanBoogie\Binding\Event;
+namespace Test\ICanBoogie\Binding\Event\Acme;
 
 final class SampleListener
 {
