@@ -38,6 +38,8 @@ final class ConfigBuilder implements Builder
     }
 
     /**
+     * @uses Event\ConfigBuilder::attach()
+     *
      * @param class-string<Event> $event_class
      * @param callable $listener
      *
@@ -51,6 +53,8 @@ final class ConfigBuilder implements Builder
     }
 
     /**
+     * @uses Event\ConfigBuilder::attach_to()
+     *
      * @param class-string $sender_class
      * @param class-string<Event> $event_class
      * @param callable $listener
@@ -60,6 +64,18 @@ final class ConfigBuilder implements Builder
     public function attach_to(string $sender_class, string $event_class, callable $listener): self
     {
         $this->inner_builder->attach_to($sender_class, $event_class, $listener);
+
+        return $this;
+    }
+
+    /**
+     * @uses Event\ConfigBuilder::use_attributes()
+     *
+     * @return $this
+     */
+    public function use_attributes(): self
+    {
+        $this->inner_builder->use_attributes();
 
         return $this;
     }
