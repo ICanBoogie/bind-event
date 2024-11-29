@@ -28,7 +28,7 @@ final class ListEventsCommandTest extends CommandTestCase
     {
         $loader = $this->getCommandLoader();
         $command1 = $loader->get('events');
-        $command2 = $loader->get('events:list');
+        $command2 = $loader->get('event:list');
 
         $this->assertSame($command1, $command2);
     }

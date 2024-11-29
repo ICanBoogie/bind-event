@@ -1,8 +1,7 @@
 # bind-event
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-event.svg)](https://packagist.org/packages/icanboogie/bind-event)
-[![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-event/master.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-event)
-[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-event/master.svg)](https://coveralls.io/r/ICanBoogie/bind-event)
+[![Code Coverage](https://coveralls.io/repos/github/ICanBoogie/bind-event/badge.svg?branch=6.0)](https://coveralls.io/r/ICanBoogie/bind-event?branch=6.0)
 [![Downloads](https://img.shields.io/packagist/dt/icanboogie/bind-event.svg)](https://packagist.org/packages/icanboogie/bind-event)
 
 The **icanboogie/bind-event** package binds [icanboogie/event][] to [ICanBoogie][], using its
@@ -26,7 +25,7 @@ $app->events;           // obtain an EventCollection instance created with the "
 
 #### Installation
 
-```bash
+```shell
 composer require icanboogie/bind-event
 ```
 
@@ -73,34 +72,25 @@ return [
 
 The project is continuously tested by [GitHub actions](https://github.com/ICanBoogie/bind-event/actions).
 
-[![Tests](https://github.com/ICanBoogie/bind-event/workflows/test/badge.svg)](https://github.com/ICanBoogie/bind-event/actions?query=workflow%3Atest)
-[![Static Analysis](https://github.com/ICanBoogie/bind-event/workflows/static-analysis/badge.svg)](https://github.com/ICanBoogie/bind-event/actions?query=workflow%3Astatic-analysis)
-[![Code Style](https://github.com/ICanBoogie/bind-event/workflows/code-style/badge.svg)](https://github.com/ICanBoogie/bind-event/actions?query=workflow%3Acode-style)
+[![Tests](https://github.com/ICanBoogie/bind-event/actions/workflows/test.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bind-event/actions/workflows/test.yml)
+[![Static Analysis](https://github.com/ICanBoogie/bind-event/actions/workflows/static-analysis.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bind-event/actions/workflows/static-analysis.yml)
+[![Code Style](https://github.com/ICanBoogie/bind-event/actions/workflows/code-style.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bind-event/actions/workflows/code-style.yml)
 
 
 
 ## Code of Conduct
 
 This project adheres to a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in
-this project and its community, you are expected to uphold this code.
+this project and its community, you're expected to uphold this code.
 
 
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 
 
-## License
-
-**icanboogie/bind-event** is released under the [BSD-3-Clause](LICENSE).
-
-
-
-
-
-[documentation]:         https://icanboogie.org/api/bind-event/3.0/
 [ICanBoogie]:            https://icanboogie.org/
 [Application]:           https://icanboogie.org/api/icanboogie/4.0/class-ICanBoogie.Core.html
 [Autoconfig feature]:    https://icanboogie.org/docs/4.0/autoconfig

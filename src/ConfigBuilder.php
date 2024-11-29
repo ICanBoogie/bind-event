@@ -1,14 +1,5 @@
 <?php
 
-/*
- * This file is part of the ICanBoogie package.
- *
- * (c) Olivier Laviale <olivier.laviale@gmail.com>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 namespace ICanBoogie\Binding\Event;
 
 use ICanBoogie\Config\Builder;
@@ -25,7 +16,7 @@ final class ConfigBuilder implements Builder
         return 'event';
     }
 
-    private readonly Event\ConfigBuilder $inner_builder;
+    private Event\ConfigBuilder $inner_builder;
 
     public function __construct()
     {
@@ -69,6 +60,8 @@ final class ConfigBuilder implements Builder
     }
 
     /**
+     * Searches for listeners annotated with the {@see \ICanBoogie\Event\Listener} attribute.
+     *
      * @uses Event\ConfigBuilder::use_attributes()
      *
      * @return $this

@@ -1,6 +1,7 @@
 services:
   _defaults:
     autowire: true
+    autoconfigure: true
 
   ICanBoogie\Event\Config:
     factory: [ '@ICanBoogie\ConfigProvider', config_for_class ]
@@ -17,5 +18,5 @@ services:
     arguments:
       $style: '%console.style.table%'
     tags:
+    - { name: console.command, command: 'event:list' }
     - { name: console.command, command: 'events' }
-    - { name: console.command, command: 'events:list' }
