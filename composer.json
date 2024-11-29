@@ -2,7 +2,7 @@
   "name": "icanboogie/bind-event",
   "type": "library",
   "description": "Binds icanboogie/event to ICanBoogie",
-  "version": "6.0",
+  "version": "7.0",
   "keywords": [
     "event",
     "icanboogie"
@@ -30,9 +30,9 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": ">=8.2",
-    "icanboogie/icanboogie": "^6.0",
-    "icanboogie/event": "^6.0"
+    "php": ">=8.4",
+    "icanboogie/icanboogie": "^7.0",
+    "icanboogie/event": "^7.0"
   },
   "require-dev": {
     "phpstan/phpstan": "^2.0",
