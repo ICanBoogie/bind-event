@@ -20,7 +20,7 @@ None
 
 ### Other Changes
 
-None
+- Updated the README: config fragment location, `attach()` vs `attach_to()` and events with a sender, `#[Listener]`, listeners that are services, how to read `event:list`, and troubleshooting.
 
 
 
