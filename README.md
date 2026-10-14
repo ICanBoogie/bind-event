@@ -1,7 +1,7 @@
 # bind-event
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-event.svg)](https://packagist.org/packages/icanboogie/bind-event)
-[![Code Coverage](https://coveralls.io/repos/github/ICanBoogie/bind-event/badge.svg?branch=6.0)](https://coveralls.io/r/ICanBoogie/bind-event?branch=6.0)
+[![Code Coverage](https://coveralls.io/repos/github/ICanBoogie/bind-event/badge.svg?branch=7.0)](https://coveralls.io/r/ICanBoogie/bind-event?branch=7.0)
 [![Downloads](https://img.shields.io/packagist/dt/icanboogie/bind-event.svg)](https://packagist.org/packages/icanboogie/bind-event)
 
 The **icanboogie/bind-event** package binds [icanboogie/event][] to [ICanBoogie][], using its
@@ -72,9 +72,9 @@ return [
 
 The project is continuously tested by [GitHub actions](https://github.com/ICanBoogie/bind-event/actions).
 
-[![Tests](https://github.com/ICanBoogie/bind-event/actions/workflows/test.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bind-event/actions/workflows/test.yml)
-[![Static Analysis](https://github.com/ICanBoogie/bind-event/actions/workflows/static-analysis.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bind-event/actions/workflows/static-analysis.yml)
-[![Code Style](https://github.com/ICanBoogie/bind-event/actions/workflows/code-style.yml/badge.svg?branch=6.0)](https://github.com/ICanBoogie/bind-event/actions/workflows/code-style.yml)
+[![Tests](https://github.com/ICanBoogie/bind-event/actions/workflows/test.yml/badge.svg?branch=7.0)](https://github.com/ICanBoogie/bind-event/actions/workflows/test.yml)
+[![Static Analysis](https://github.com/ICanBoogie/bind-event/actions/workflows/static-analysis.yml/badge.svg?branch=7.0)](https://github.com/ICanBoogie/bind-event/actions/workflows/static-analysis.yml)
+[![Code Style](https://github.com/ICanBoogie/bind-event/actions/workflows/code-style.yml/badge.svg?branch=7.0)](https://github.com/ICanBoogie/bind-event/actions/workflows/code-style.yml)
 
 
 

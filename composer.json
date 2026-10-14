@@ -2,7 +2,6 @@
   "name": "icanboogie/bind-event",
   "type": "library",
   "description": "Binds icanboogie/event to ICanBoogie",
-  "version": "7.0",
   "keywords": [
     "event",
     "icanboogie"
@@ -22,6 +21,9 @@
     "source": "https://github.com/ICanBoogie/bind-event"
   },
   "config": {
+    "platform": {
+      "php": "8.4.1"
+    },
     "sort-packages": true,
     "allow-plugins": {
       "icanboogie/autoconfig": true
@@ -35,8 +37,8 @@
     "icanboogie/event": "^7.0"
   },
   "require-dev": {
-    "phpstan/phpstan": "^2.0",
-    "phpunit/phpunit": "^11.4"
+    "phpstan/phpstan": "^2.3",
+    "phpunit/phpunit": "^13.4"
   },
   "autoload": {
     "psr-4": {
