@@ -2,6 +2,7 @@
 
 namespace ICanBoogie\Binding\Event;
 
+use ICanBoogie\Event\ConfigBuilder;
 use Test\ICanBoogie\Binding\Event\Acme\SampleEvent;
 use Test\ICanBoogie\Binding\Event\Acme\SampleEventWithSender;
 use Test\ICanBoogie\Binding\Event\Acme\SampleListener;

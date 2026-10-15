@@ -54,7 +54,7 @@
     "icanboogie": {
       "config-path": "config",
       "config-constructor": {
-        "ICanBoogie\\Event\\Config": "ICanBoogie\\Binding\\Event\\ConfigBuilder"
+        "ICanBoogie\\Event\\Config": "ICanBoogie\\Event\\ConfigBuilder"
       }
     }
   }

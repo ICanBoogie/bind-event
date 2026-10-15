@@ -45,7 +45,7 @@ The following example attaches a listener to an event, and a listener to an even
 
 namespace App;
 
-use ICanBoogie\Binding\Event\ConfigBuilder;
+use ICanBoogie\Event\ConfigBuilder;
 
 return fn(ConfigBuilder $config) => $config
     ->attach(NodeSavedEvent::class, [ Hooks::class, 'on_node_saved' ])
@@ -55,10 +55,10 @@ return fn(ConfigBuilder $config) => $config
 - `attach($event_class, $listener)` attaches a listener to an event, **whatever its sender**.
 - `attach_to($sender_class, $event_class, $listener)` attaches a listener to an event emitted **with a
   sender** of that class, a subclass, or an implementation of that interface.
-- `use_attributes()` discovers listeners annotated with the `ICanBoogie\Event\Listener` attribute.
+- `enable_discovery()` discovers listeners annotated with the `ICanBoogie\Event\Listener` attribute.
 
 ```php
-return fn(ConfigBuilder $config) => $config->use_attributes();
+return fn(ConfigBuilder $config) => $config->enable_discovery();
 ```
 
 > [!IMPORTANT]
@@ -90,7 +90,7 @@ For instance, to log both exceptions and errors, attach the listener to `Throwab
 
 namespace App;
 
-use ICanBoogie\Binding\Event\ConfigBuilder;
+use ICanBoogie\Event\ConfigBuilder;
 use ICanBoogie\HTTP\RecoverEvent;
 
 use function ICanBoogie\Service\ref;
@@ -103,7 +103,7 @@ return fn(ConfigBuilder $config) => $config
 
 ## Attaching listeners using the `#[Listener]` attribute
 
-Call `use_attributes()` and mark methods with the `ICanBoogie\Event\Listener` attribute. The attribute is
+Call `enable_discovery()` and mark methods with the `ICanBoogie\Event\Listener` attribute. The attribute is
 provided by [icanboogie/event][] (`event/lib/Event/Listener.php`), and found using
 [olvlvl/composer-attribute-collector][], which must be set up in your project.
 

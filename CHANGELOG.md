@@ -16,7 +16,8 @@ None
 
 ### Backward Incompatible Changes
 
-None
+- Removed `ICanBoogie\Binding\Event\ConfigBuilder`; `event` fragments now receive `ICanBoogie\Event\ConfigBuilder`, which
+  implements `ICanBoogie\Config\Builder`.
 
 ### Other Changes
 
